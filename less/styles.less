@@ -115,6 +115,8 @@ a.ribbon_wrapper:focus{
 
 .calendar {
     padding-top: 40px;
+    width: 100%;
+    float: left;
 }
 
 .pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-prev {
@@ -131,5 +133,38 @@ span.pignose-calendar-top-year {
 
 h3.calendar_heading {
     padding: 40px 0px 0px 70px;
+}
+
+
+
+.time_confirm {
+    float: right;
+    margin-top:120px;
+    max-height:340px;
+    overflow:auto;
+}
+
+button.time_button {
+    width: 100%;
+}
+
+button.time_button,
+button.confirm_button {
+    padding: 5px 8px;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 40px;
+    outline:none;
+}
+
+.single_time_confirm {
+    margin-bottom: 8px;
+    overflow:hidden;
+    clear:both;
+}
+
+button.time_button span.time {
+    color: #f00;
 }
 

@@ -36,3 +36,38 @@ $(function() {
 		disabledWeekdays: [0, 6], // SUN (0), SAT (6)
 	});
 });
+
+
+// jquery codes for showing the time when click on the date
+$( document ).ready(function() {
+	$('.time_confirm').hide();
+	$('.confirm_button').hide();
+
+    $(".pignose-calendar-unit:not(.pignose-calendar-unit-disabled)").click(function(){
+    	$('.content.content_with_ribbon').parent().removeClass('col-md-5');
+    	$('.content').parent().removeClass('offset-md-1');
+    	$('.content.content_with_ribbon').parent().addClass('col-md-7');
+    	$('.calendar').css({"width":"70%", "margin": "0px"});
+    	$('.time_confirm').css("width", "28%");
+		$('.time_confirm').show(500);
+    });
+
+    $(".time_button").click(function(){
+
+		$('.confirm_button').hide();
+		$('.time_button').css({
+			"width":"100%",
+			"background":"transparent",
+			"transition":"ease 0.5s",
+		});
+    	$(this).siblings('.confirm_button').show(500).css({
+			"width":"48%",
+			"float":"right",
+    	});
+    	$(this).css({
+			"width":"48%",
+			"float":"left",
+			"background":"#333",
+    	});
+    });
+});
