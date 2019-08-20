@@ -10,6 +10,7 @@
 	<!-- CSS files for this project -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/pignose.calendar.min.css">
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -18,7 +19,44 @@
 	<section id="main_body">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-5 offset-md-1">
+					<div class="content">
+						<div class="back_arrow">
+								<a href="index.html">
+									<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+								</a>
+						</div>
+						<div class="row">
+							<div class="col-md-8 offset-md-2 mt-4">
+								<!-- Content header start here -->
+								<div class="content_header mt-4">
+									<div class="powered_logo">
+										<a href="#"><img src="assets/images/logo.png" alt="Logo Image"></a>
+									</div>
+									<h3 class="powered_name">Harris Web Works</h3>
+									
+								</div><!-- Content header end here -->
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-8 offset-md-2">
+								<a href="#" class="meeting_link">
+									<div class="meeting_header">
+										<!-- <div class="circle_icon">
+											<i class="fa fa-circle" aria-hidden="true"></i>
+										</div> -->
+										<h3>30 Minute Meeting</h3>
+										<div class="clock_time">
+											<i class="fa fa-clock-o" aria-hidden="true"></i> <span>30min</span>
+										</div>
+									</div>
+									<p class="meeting_text">Please add me or follow the medium of communication in time</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5">
 					<!-- Content start here -->
 					<div class="content content_with_ribbon">
 						<!-- Ribbon start here -->
@@ -29,36 +67,9 @@
 							</div>
 						</a><!-- Ribbon end here -->
 
-						
-						<div class="row">
-							<div class="col-md-4 offset-md-4 mt-4 text-center">
-								<!-- Content header start here -->
-								<div class="content_header mt-4">
-									<div class="powered_logo">
-										<a href="#"><img src="assets/images/logo.png" alt="Logo Image"></a>
-									</div>
-									<h3 class="powered_name">Harris Web Works</h3>
-									<p>Welcome to our scheduling page. Please follow the instructions to add an event to our calendar.</p>
-								</div><!-- Content header end here -->
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-md-4 offset-md-2">
-								<a href="calendar.html" class="meeting_link">
-									<div class="meeting_header">
-										<div class="circle_icon">
-											<i class="fa fa-circle" aria-hidden="true"></i>
-										</div>
-										<h3>30 Minute Meeting</h3>
-										<div class="arrow_icon">
-											<i class="fa fa-caret-right" aria-hidden="true"></i>
-										</div>
-									</div>
-									<p class="meeting_text">Please add me or follow the medium of communication in time</p>
-								</a>
-							</div>
-						</div>
+						<!-- Calendar Start Here-->
+						<h3 class="calendar_heading">Select a Date & Time</h3>
+						<div class="calendar mt-2"></div><!-- Calendar End Here-->
 					</div><!-- Content end here -->
 				</div>
 			</div>
@@ -70,5 +81,7 @@
 	<script src="assets/js/jquery-3.4.1.min.js"></script>
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/pignose.calendar.full.min.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
 </html>

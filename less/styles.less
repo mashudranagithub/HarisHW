@@ -12,7 +12,6 @@ img{
 	.content{
 		background: @white_color;
     	min-height: 90vh;
-    	max-width: 95%;
 		margin: 5vh auto;
 		box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.08);
 		border-radius: 8px;
@@ -21,8 +20,9 @@ img{
 	.content.content_with_ribbon{
 		position: relative;
 		a.ribbon_wrapper{
+
+			transition: all 0.5s;
 		    position: absolute;
-		    display: block;
 		    top: -6px;
 		    right: -6px;
 		    overflow: hidden;
@@ -51,13 +51,6 @@ img{
 			    }
 			}
 		}
-		a.ribbon_wrapper:hover,
-		a.ribbon_wrapper:focus{
-			-webkit-transform: scale(1.05);
-			transform: scale(1.05);
-			transition: easy 0.3s;
-			outline: none;
-		}
 		.ribbon_wrapper::before{
 			top:0;
 			left:0;
@@ -76,5 +69,67 @@ img{
 		    transition: all 0.1s ease-in;
 	    }
 	}
+}
+
+
+a.ribbon_wrapper:hover,
+a.ribbon_wrapper:focus{
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+	outline: none;
+}
+
+
+.pignose-calendar-unit:not(.pignose-calendar-unit-disabled) a {
+    background: #969696;
+    color:#fff;
+    font-weight:bold;
+}
+
+.pignose-calendar.pignose-calendar-light.pignose-calendar-default {
+    max-width: 80%;
+    box-shadow: none;
+    border: none;
+}
+
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-date {
+    position: static;
+    padding: 0px;
+    height: 30px;
+    display:inline-block;
+    width:70%;
+    padding-left:25px;
+}
+
+.pignose-calendar .pignose-calendar-top {
+    padding: 0px;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-month, .pignose-calendar .pignose-calendar-top .pignose-calendar-top-year {
+    display: inline-block;
+    float: left;
+}
+
+.calendar {
+    padding-top: 40px;
+}
+
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-prev {
+    position: absolute;
+    float: none;
+    right: 60px;
+}
+
+span.pignose-calendar-top-year {
+    padding-left: 15px;
+    font-size: 20px !important;
+}
+
+
+h3.calendar_heading {
+    padding: 40px 0px 0px 70px;
 }
 
