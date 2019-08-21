@@ -1,13 +1,23 @@
 @body_color : #fbfcfd;
 @font_color: #4d505599;
 @white_color: #fff;
+@gray_color: #4d50551a;
+@blue_color: #4a91e9;
+@active_color: #00a2ff26;
+@enable_date: #00a2ff;
+
 @1pxborder : 1px solid #4d50551a;
 
 @normal_font : 16px;
 @full_width: 100%;
+@main_font: 'Open Sans', sans-serif;
 
 img{
 	max-width: @full_width;
+}
+
+body{
+	font-family: @main_font;
 }
 
 #main_body{
@@ -20,11 +30,11 @@ img{
 		box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.08);
 		border-radius: 8px;
 		border: @1pxborder;
+		position:relative;
 	}
 	.content.content_with_ribbon{
 		position: relative;
 		a.ribbon_wrapper{
-
 			transition: all 0.5s;
 		    position: absolute;
 		    top: -6px;
@@ -103,15 +113,108 @@ a.ribbon_wrapper:focus{
 }
 
 
+a.meeting_link {
+    display: block;
+    padding: 30px 20px;
+    text-decoration:none;
+    border-top: @1pxborder;
+    margin-top: 20px;
+    min-height:180px;
+    .meeting_header {
+	    h3{
+	    	font-size: @normal_font + 2px;
+	    	font-weight: bold;
+	    	color: #4d5055;
+	    	line-height: 30px;
+	    }
+	    .circle_icon i.fa {
+		    font-size: 30px;
+		    color: @blue_color;
+		    margin-right: 15px;
+		}
+		.arrow_icon i.fa{
+			font-size: @normal_font * 2;
+			color: #4D5055;
+		}
+	}
+	p.meeting_text{
+		color: @font_color;
+		font-size: @normal_font - 2px;
+		margin-top: 15px;
+	}
+}
+
+a.meeting_link:hover,
+a.meeting_link:focus{
+	background-color: @gray_color;
+}
+
+
+
+.back_arrow {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    a{
+    	display: block;
+		line-height: 40px;
+		    width: 40px;
+		text-align: center;
+	    :hover{
+	    	background: @active_color;
+		    width: 40px;
+		    height: 40px;
+		    border-radius: 50%;
+	    }
+	    i.fa{
+			font-size: 22px;
+			font-weight: 300;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 40px;
+	    }
+    }
+}
+
+
+
+
 
 
 
 
 .pignose-calendar-unit:not(.pignose-calendar-unit-disabled) a {
-    background: #969696;
-    color:#fff;
+    background: @active_color;
+    color: @enable_date;
     font-weight:bold;
 }
+
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-disabled a{
+	background-color: transparent;
+}
+
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-active a{
+	background: @enable_date;
+}
+
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-sat a,
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-sun a,
+.pignose-calendar .pignose-calendar-unit a{
+	color: @font_color;
+	font-size: @normal_font;
+	opacity: 1 !important;
+}
+
+.pignose-calendar .pignose-calendar-header .pignose-calendar-week,
+.pignose-calendar .pignose-calendar-header .pignose-calendar-week.pignose-calendar-week-sat,
+.pignose-calendar .pignose-calendar-header .pignose-calendar-week.pignose-calendar-week-sun{
+	font-size: @normal_font - 4px;
+	color: @font_color;
+}
+
+
+
 
 .pignose-calendar.pignose-calendar-light.pignose-calendar-default {
     max-width: 80%;
