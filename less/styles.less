@@ -1,9 +1,13 @@
 @body_color : #fbfcfd;
+@font_color: #4d505599;
 @white_color: #fff;
 @1pxborder : 1px solid #4d50551a;
 
+@normal_font : 16px;
+@full_width: 100%;
+
 img{
-	max-width: 100%;
+	max-width: @full_width;
 }
 
 #main_body{
@@ -80,6 +84,29 @@ a.ribbon_wrapper:focus{
 }
 
 
+
+
+.content_header{
+	h3.powered_name {
+	    font-size: @normal_font;
+	    color: @font_color;
+	}
+	p{
+		color: @font_color;
+		font-size: @normal_font - 2px;
+		padding: 10px 30px;
+	}
+	.powered_logo a img {
+	    width: @full_width - 60%;
+	    margin-bottom: 25px;
+	}
+}
+
+
+
+
+
+
 .pignose-calendar-unit:not(.pignose-calendar-unit-disabled) a {
     background: #969696;
     color:#fff;
@@ -142,6 +169,7 @@ h3.calendar_heading {
     margin-top:120px;
     max-height:340px;
     overflow:auto;
+    display:none;
 }
 
 button.time_button {

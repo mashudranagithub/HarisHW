@@ -40,7 +40,7 @@ $(function() {
 
 // jquery codes for showing the time when click on the date
 $( document ).ready(function() {
-	$('.time_confirm').hide();
+	// $('.time_confirm').hide();
 	$('.confirm_button').hide();
 
     $(".pignose-calendar-unit:not(.pignose-calendar-unit-disabled)").click(function(){
