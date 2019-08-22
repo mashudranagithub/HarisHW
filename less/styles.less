@@ -18,6 +18,8 @@ img{
 
 body{
 	font-family: @main_font;
+	letter-spacing: 0.3px;
+	color: #4d5055;
 }
 
 #main_body{
@@ -177,6 +179,19 @@ a.meeting_link:focus{
     }
 }
 
+.meeting_header h3{
+	font-size: @normal_font * 2px - 7px;
+	font-weight: bold;
+	color: #4d5055;
+	line-height: 32px;
+}
+
+.clock_time {
+    color:  @font_color;
+    font-size: 16px;
+    margin: 10px 0px 25px;
+}
+
 
 
 
@@ -192,6 +207,10 @@ a.meeting_link:focus{
 
 .pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-disabled a{
 	background-color: transparent;
+}
+
+.pignose-calendar .pignose-calendar-unit a{
+	height:auto;
 }
 
 .pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-active a{
@@ -269,7 +288,7 @@ h3.calendar_heading {
 
 .time_confirm {
     float: right;
-    margin-top:120px;
+    margin-top:115px;
     max-height:340px;
     overflow:auto;
     display:none;
@@ -279,14 +298,28 @@ button.time_button {
     width: 100%;
 }
 
+.confirm_button a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
 button.time_button,
 button.confirm_button {
     padding: 5px 8px;
     background: transparent;
-    border: 1px solid #ddd;
+    border: 1px solid @blue_color !important;
+    color: @blue_color !important;
     border-radius: 4px;
     height: 40px;
     outline:none;
+    font-size: @normal_font - 4px;
+}
+
+button.time_button:hover,
+button.confirm_button:hover {
+    border: 2px solid @blue_color;
 }
 
 .single_time_confirm {
@@ -295,7 +328,56 @@ button.confirm_button {
     clear:both;
 }
 
-button.time_button span.time {
-    color: #f00;
+
+
+.half_width{
+	width:49%;
 }
 
+.data_collect_form {
+    margin: 50px;
+    max-width: 450px;
+}
+
+
+
+
+.form-check {
+    margin-bottom: 10px;
+}
+
+form h4 {
+    font-size: 14px;
+}
+
+.form-group label {
+    font-size: 14px;
+}
+
+form {
+    font-size: 16px;
+}
+
+.form-check .form-check-label {
+    font-size: 16px;
+}
+
+input.form-control {}
+
+input.check-input.form-control {
+    line-height: 30px;
+    margin-top: -5px;
+}
+
+input#Check15, input.radio_text_field {
+    margin-top: 12px;
+}
+
+input[type=checkbox], input[type=radio] {
+    width: 15px;
+    height: 15px;
+}
+
+button.btn.btn-primary {
+    margin-top: 30px;
+}

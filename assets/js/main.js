@@ -52,6 +52,8 @@ $( document ).ready(function() {
 		$('.time_confirm').show(500);
     });
 
+
+
     $(".time_button").click(function(){
 
 		$('.confirm_button').hide();
@@ -61,13 +63,16 @@ $( document ).ready(function() {
 			"transition":"ease 0.5s",
 		});
     	$(this).siblings('.confirm_button').show(500).css({
-			"width":"48%",
 			"float":"right",
+			"background":"#4a91e9",
+			"color":"#fff",
     	});
+    	$(this).siblings('.confirm_button').addClass("half_width");
     	$(this).css({
-			"width":"48%",
+			"width":"49%",
 			"float":"left",
 			"background":"#333",
+			"color":"#fff",
     	});
     });
 });
